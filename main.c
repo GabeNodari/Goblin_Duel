@@ -16,6 +16,7 @@ int get_random(int min, int max) {
   return random;
 }
 
+//MAIN
 int main () {
   srand(time(NULL));
 
@@ -29,7 +30,7 @@ int main () {
   
     printf("\nAtaque o Goblin! Role a iniciativa e veremos se acertou a CA do monstro.\n\n");
 
-//Ataque do jogador
+//Switch-case: ataque do jogador
     switch (dicePlayer) {
       case (1):
         printf("1?!\nEpic fail. Seu personagem caiu sozinho e se feriu na queda.\n");
@@ -48,7 +49,7 @@ int main () {
         break;
   }
 
-//Vitória do jogador
+//If-statement: vitória do jogador
     if (dicePlayer == 4 || dicePlayer == 20) {
     printf("O combate acabou. Seu personagem saiu o vencedor do duelo.");
     break;
@@ -56,7 +57,7 @@ int main () {
         printf("\nO Goblin vai atacar! Vamos ver se ele te acertou ou errou.\n\n");
   }
   
-//Ataque do inimigo
+//Switch-case: ataque do inimigo
     switch (diceGoblin) {
       case (1):
         printf("1?!\nEpic fail. O Goblin caiu sozinho e se feriu na queda.\n");
@@ -75,13 +76,13 @@ int main () {
         break;
   }
 
-//Vitória do inimigo
+//If-statement: vitória do inimigo
     if (diceGoblin == 4 || diceGoblin == 20) {
       printf("O combate acabou. O Goblin saiu o vencedor do duelo.");
       break;
     }
     
-//Condição para o encerramento
+//Condição para encerramento
   } while (diceGoblin != 20 || diceGoblin != 4 || dicePlayer != 4 ||dicePlayer != 20);
   return 0;
 }
