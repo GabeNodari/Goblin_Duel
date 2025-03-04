@@ -2,7 +2,7 @@
 #include <stdio.h>  
 #include <time.h> 
 
-//Randomizador para o "d20", com alguns valores agrupados
+//Randomizador
 int get_random(int min, int max) { 
   int random;
   random = (rand() % (max - min + 1) + min);
@@ -19,8 +19,8 @@ int get_random(int min, int max) {
 int main () {
   srand(time(NULL));
 
-//Declaração para o do-while
-  int dicePlayer, diceGoblin = 0;
+//Declaração
+  int dicePlayer, diceGoblin;
 
 //Loop do combate
   do {
@@ -81,7 +81,7 @@ int main () {
       break;
     }
     
-//Condição para o encerramento do loop
+//Condição para o encerramento
   } while (diceGoblin != 20 || diceGoblin != 4 || dicePlayer != 4 ||dicePlayer != 20);
   return 0;
 }
